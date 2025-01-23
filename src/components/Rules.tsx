@@ -1,4 +1,8 @@
-function Rules() {
+type Props = {
+  onOk: () => void;
+};
+
+function Rules({ onOk }: Props) {
   return (
     <div className="p-8 bg-white rounded-[2.5rem] max-w-xs sm:max-w-lg border-none sm:border-solid border-[3px] border-b-[12px] border-black ${cssClasses}">
       <h1 className="text-5xl font-bold text-center uppercase mb-8">rules</h1>
@@ -19,6 +23,7 @@ function Rules() {
       </ol>
       <button
         type="button"
+        onClick={onOk}
         className={`w-[70px] h-[75px] absolute left-1/2 -translate-x-1/2 -translate-y-[15%] bg-icon-check hover:bg-icon-check-hover`}
       ></button>
     </div>

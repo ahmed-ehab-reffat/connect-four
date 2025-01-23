@@ -1,5 +1,7 @@
+import { Board } from "./Game";
+
 type Props = {
-  board: ("red" | "yellow" | null)[][];
+  board: Board;
   handleTurn: (colIndex: number) => void;
 };
 
